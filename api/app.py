@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from dotenv import load_dotenv
-from models import db, Videojuego
+from api.models import db, Videojuego
 from datetime import datetime
 import os
 
