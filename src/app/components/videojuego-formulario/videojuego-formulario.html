@@ -1,0 +1,9 @@
+<section class="formulario">
+  <h2>Añadir videojuego</h2>
+
+  <input type="text" placeholder="Título" [(ngModel)]="videojuego.titulo">
+  <input type="text" placeholder="Desarrollador" [(ngModel)]="videojuego.desarrollador">
+  <input type="date" [(ngModel)]="videojuego.fecha_lanzamiento">
+
+  <button (click)="guardar()">Guardar</button>
+</section>

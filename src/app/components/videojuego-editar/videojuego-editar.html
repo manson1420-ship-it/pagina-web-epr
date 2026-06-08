@@ -1,0 +1,9 @@
+<section class="formulario">
+  <h2>Editar videojuego</h2>
+
+  <input type="text" [(ngModel)]="videojuego.titulo">
+  <input type="text" [(ngModel)]="videojuego.desarrollador">
+  <input type="date" [(ngModel)]="videojuego.fecha_lanzamiento">
+
+  <button (click)="guardarCambios()">Actualizar</button>
+</section>

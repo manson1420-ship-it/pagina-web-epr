@@ -1,0 +1,77 @@
+/* Elimina los márgenes por defecto del navegador */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  position: absolute; /* Lo fija en la parte superior */
+  top: 0; /* Lo pega al borde superior de la ventana */
+  left: 0; /* Lo pega al borde izquierdo de la pantalla */
+  z-index: 1000; /* Asegura que siempre esté por encima del contenido */
+  background-color: #e3e4fa; 
+  padding: 16px 32px;        /* Espaciado interno para separar el texto de los bordes */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Opcional: una ligera sombra para darle profundidad */
+}
+
+/* Ajustes para el título dentro del header */
+h1 {
+  margin: 0;                 /* Elimina el margen por defecto del h1 */
+  text-align: left;          /* Alinea el texto a la izquierda */
+  color: #333;               /* Un color gris oscuro para mejorar el contraste */
+  font-size: 24px;
+}
+
+/* Tu contenedor existente con un pequeño ajuste de margen superior */
+.contenedor {
+  width: 85%;
+  margin: 20px auto;        /* Reducido de 40px a 20px para mantener harmonía con el header */
+}
+
+.btn-agregar {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: #2d89ef;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;           /* Tamaño de la letra */
+  padding: 12px 16px;
+  border: none;
+  border-radius: 9px;       /* Bordes redondeados */
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+th {
+  background-color: #222;
+  color: white;
+}
+
+button {
+  margin: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  /*bottom: 0;
+  left: 0;*/
+  background-color: #e3e4fa;
+  padding: 10px 10px;
+}

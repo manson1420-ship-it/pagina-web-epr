@@ -1,0 +1,26 @@
+h2 {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  padding-left: 20px;
+  color: darkblue;
+}
+
+section {
+  border-collapse: collapse;
+  width: 38%;
+  border-collapse: separate; /* Cambiado para permitir esquinas redondeadas */
+  border-spacing: 0;         /* Elimina el espacio entre celdas que genera el 'separate' */
+  /*text-align: center;*/
+  border: 1px solid #ccc;    /* El contorno exterior ahora lo maneja la tabla */
+  border-radius: 7px;       /* Controla qué tan redondeadas quieres las esquinas */
+  overflow: hidden;          /* Obliga a las celdas internas a respetar las esquinas redondeadas */
+  background-color: #7fffd4; /* Fondo verde claro suave */
+}
+
+p {
+  
+  color: rgb(41, 74, 75);
+  padding-left: 12px;
+  width: 96%;
+}

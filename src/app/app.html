@@ -1,0 +1,42 @@
+<header>
+  <h1>Tienda de Videojuegos</h1>
+</header>
+
+<div class="contenedor">
+
+  <button class="btn-agregar" (click)="abrirFormulario()">
+    Añadir nuevo titulo
+  </button>
+
+  @if (mostrarFormulario) {
+    <app-videojuego-formulario
+      (videojuegoCreado)="agregarVideojuego($event)">
+    </app-videojuego-formulario>
+  }
+
+  @if (videojuegoEditando) {
+    <app-videojuego-editar
+      [videojuego]="videojuegoEditando"
+      (videojuegoActualizado)="actualizarVideojuego($event)">
+    </app-videojuego-editar>
+  }
+
+  @if (videojuegoSeleccionado) {
+    <app-videojuego-detalle
+      [videojuego]="videojuegoSeleccionado">
+    </app-videojuego-detalle>
+  }
+
+  <app-videojuego-lista
+    [videojuegos]="videojuegos"
+    (ver)="verDetalle($event)"
+    (editar)="editarVideojuego($event)"
+    (eliminar)="eliminarVideojuego($event)">
+  </app-videojuego-lista>
+</div>
+
+<footer>
+		<div align="center">
+			<a>&copy; 2026 Emmanuel Prado Web</a>
+		</div>
+</footer>
