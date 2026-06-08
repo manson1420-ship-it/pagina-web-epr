@@ -35,10 +35,18 @@ export class AppComponent implements OnInit {
   cargarVideojuegos() {
     this.videojuegoService.obtenerVideojuegos().subscribe({
       next: (data) => {
-        this.videojuegos = data;
+        console.log('Datos recibidos:', data);
+
+        if (Array.isArray(data)) {
+          this.videojuegos = data;
+        } else {
+          this.videojuegos = [];
+          console.error('La API no devolvio un arreglo:', data);
+        }
       },
       error: (error) => {
         console.error('Error al cargar videojuegos:', error);
+        this.videojuegos = [];
       }
     });
   }

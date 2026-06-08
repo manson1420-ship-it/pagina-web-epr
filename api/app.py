@@ -21,7 +21,8 @@ db.init_app(app)
 
 @app.route("/api/videojuegos", methods=["GET"])
 def inicio():
-    return jsonify({"mensaje": "API de tienda de videojuegos funcionando"})
+    videojuegos = Videojuego.query.all();
+    return jsonify([v.to_dict() for v in videojuegos])
 
 @app.route("/api/videojuegos", methods=["GET"])
 def obtener_videojuegos():
